@@ -95,7 +95,7 @@ You must fork the [original repository](https://github.com/RodrigoGrijalba/ENEI-
   * Convergence and comparison plots
 * A short (~600 words) write-up explaining:
 
-  * How the gradient differs between binary, OvA, and multinomial forms
-  * How numerical stability issues may arise in softmax
-  * When OvA and multinomial approaches diverge in predictions
+The binary model (with a learning rate of 5e-4) and the multinomial model (with a learning rate of 1e-1) both converge at a similar rate. The One-vs-All (OvA) approach can be understood simply as an extension of the binary classification framework, applied independently across multiple classes.
+The use of the softmax function helps prevent the exponential terms from growing excessively fast, which could otherwise lead to numerical overflow. By normalizing the output values into a probability distribution, softmax ensures that the resulting computations remain stable and within manageable numerical limits.
+According to our estimates, no significant divergence was observed. Overall, both models demonstrate a high degree of robustness, suggesting that their performance remains consistent and reliable across different specifications or estimation conditions.
 
